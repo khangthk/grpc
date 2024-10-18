@@ -114,7 +114,7 @@
   test_tags: [flow_control_test]
 - name: pick_first_new
   description: New pick_first impl with memory reduction.
-  expiry: 2024/10/30
+  expiry: 2025/03/01
   owner: roth@google.com
   test_tags: ["lb_unit_test", "cpp_lb_end2end_test", "xds_end2end_test"]
 - name: promise_based_inproc_transport
@@ -124,6 +124,13 @@
   owner: ctiller@google.com
   test_tags: []
   allow_in_fuzzing_config: false # experiment currently crashes if enabled
+- name: rq_fast_reject
+  description:
+    Resource quota rejects requests immediately (before allocating the request
+    structure) under very high memory pressure.
+  expiry: 2025/06/06
+  owner: ctiller@google.com
+  test_tags: []
 - name: schedule_cancellation_over_write
   description: Allow cancellation op to be scheduled over a write
   expiry: 2024/12/01
